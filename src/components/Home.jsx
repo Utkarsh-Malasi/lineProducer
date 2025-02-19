@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from './Header'
-
+import founderImage from '../images/founder.jpg'
 const Home = () => {
   return (
     <>
