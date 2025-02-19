@@ -26,7 +26,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button 
-            className='md:hidden text-white'
+            className='md:hidden text-white z-50 fixed right-4 top-4'
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -40,17 +40,19 @@ const Header = () => {
         </div>
 
         {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className='md:hidden bg-gray-800 px-4 py-2'>
-            <div className='flex flex-col space-y-2'>
-              <button onClick={() => {navigate('/'); setIsMenuOpen(false)}} className='text-white hover:text-blue-500 font-bold py-2'>Home</button>
-              <button onClick={() => {navigate('/about'); setIsMenuOpen(false)}} className='text-white hover:text-green-500 font-bold py-2'>About</button>
-              <button onClick={() => {navigate('/projects'); setIsMenuOpen(false)}} className='text-white hover:text-yellow-500 font-bold py-2'>Projects</button>
-              <button onClick={() => {navigate('/services'); setIsMenuOpen(false)}} className='text-white hover:text-pink-500 font-bold py-2'>Services</button>
-              <button onClick={() => {navigate('/contact'); setIsMenuOpen(false)}} className='text-white hover:text-purple-500 font-bold py-2'>Contact</button>
-            </div>
+        <div 
+          className={`fixed top-0 right-0 h-full w-64 bg-gray-800 transform transition-transform duration-300 ease-in-out ${
+            isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+          } md:hidden z-40`}
+        >
+          <div className='flex flex-col space-y-2 pt-20 px-4'>
+            <button onClick={() => {navigate('/'); setIsMenuOpen(false)}} className='text-white hover:text-blue-500 font-bold py-2'>Home</button>
+            <button onClick={() => {navigate('/about'); setIsMenuOpen(false)}} className='text-white hover:text-green-500 font-bold py-2'>About</button>
+            <button onClick={() => {navigate('/projects'); setIsMenuOpen(false)}} className='text-white hover:text-yellow-500 font-bold py-2'>Projects</button>
+            <button onClick={() => {navigate('/services'); setIsMenuOpen(false)}} className='text-white hover:text-pink-500 font-bold py-2'>Services</button>
+            <button onClick={() => {navigate('/contact'); setIsMenuOpen(false)}} className='text-white hover:text-purple-500 font-bold py-2'>Contact</button>
           </div>
-        )}
+        </div>
       </div>
     </>
   )
