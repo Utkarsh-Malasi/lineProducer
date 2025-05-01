@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { getImagePath } from '../utils/imageUtils'
 
 const ProjectsSection = ({ projects, featuredProject }) => {
   const navigate = useNavigate()
@@ -82,7 +83,7 @@ const ProjectsSection = ({ projects, featuredProject }) => {
             <div className="flex flex-col lg:flex-row items-stretch">
               {/* Enhanced image section with larger size */}
               <div className="lg:w-2/5 relative overflow-hidden h-60 sm:h-72 md:h-80 lg:h-auto w-full">
-                <img src={kashmirFilesProject.image} alt={kashmirFilesProject.title} className="w-full h-full object-cover transition-transform duration-700 hover:scale-105 filter saturate-120" />
+                <img src={getImagePath(kashmirFilesProject.image)} alt={kashmirFilesProject.title} className="w-full h-full object-cover transition-transform duration-700 hover:scale-105 filter saturate-120" />
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-900/50 to-indigo-900/50 opacity-50"></div>
                 <div className="absolute top-4 left-4 px-4 py-1.5 bg-gradient-to-r from-blue-600/90 to-indigo-600/90 text-blue-50 rounded-full text-sm font-semibold">Featured Film</div>
               </div>
@@ -143,7 +144,7 @@ const ProjectsSection = ({ projects, featuredProject }) => {
           {filteredProjects.slice(0, visibleProjects).map((project) => (
             <div key={project.id} className="bg-gradient-to-br from-gray-800/70 to-gray-900/70 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden hover:shadow-blue-500/30 transition-all duration-300 transform hover:scale-[1.03] border border-blue-600/10">
               <div className="relative overflow-hidden h-40 sm:h-48 md:h-52">
-                <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-transform duration-700 hover:scale-110 filter saturate-125" />
+                <img src={getImagePath(project.image)} alt={project.title} className="w-full h-full object-cover transition-transform duration-700 hover:scale-110 filter saturate-125" />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-blue-900/20 to-transparent opacity-70"></div>
               </div>
               <div className="p-4 md:p-6">

@@ -60,19 +60,32 @@ import img21 from './images2/IMG-20250430-WA0021.jpg'
 import img22 from './images2/IMG-20250430-WA0022.jpg'
 import img23 from './images2/IMG-20250430-WA0023.jpg'
 
+import { getImagePath } from './utils/imageUtils'
+
 function App() {
   const [activeSection, setActiveSection] = useState('home')
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   
   // Array of all project images for the diagonal gallery
   const galleryImages = [
-    kashmir, pgmunni, heroxoom, mggloster, bbcuk, tohaagaye, tatanamak, sleepwell,
-    ishqme, tataparot, drinkad, dooriyan, humdono, jeet, koiapna, darkscroll,
-    bestseler, realme, accCEm, tataTrust,img1,img2,img8,img9,img16,img18,img19
+    getImagePath(kashmir), getImagePath(pgmunni), getImagePath(heroxoom), getImagePath(mggloster), 
+    getImagePath(bbcuk), getImagePath(tohaagaye), getImagePath(tatanamak), getImagePath(sleepwell),
+    getImagePath(ishqme), getImagePath(tataparot), getImagePath(drinkad), getImagePath(dooriyan), 
+    getImagePath(humdono), getImagePath(jeet), getImagePath(koiapna), getImagePath(darkscroll),
+    getImagePath(bestseler), getImagePath(realme), getImagePath(accCEm), getImagePath(tataTrust),
+    getImagePath(img1), getImagePath(img2), getImagePath(img8), getImagePath(img9), 
+    getImagePath(img16), getImagePath(img18), getImagePath(img19)
   ]
-const galleryImages2=[
-  img0, img1, img2, img4, img5, img7, img8, img9, img10, img11, img12, img13, img14, img15, img16, img17, img18, img19, img20, img21, img22, img23
-]
+  
+  const galleryImages2 = [
+    getImagePath(img0), getImagePath(img1), getImagePath(img2), getImagePath(img4), 
+    getImagePath(img5), getImagePath(img7), getImagePath(img8), getImagePath(img9), 
+    getImagePath(img10), getImagePath(img11), getImagePath(img12), getImagePath(img13), 
+    getImagePath(img14), getImagePath(img15), getImagePath(img16), getImagePath(img17), 
+    getImagePath(img18), getImagePath(img19), getImagePath(img20), getImagePath(img21), 
+    getImagePath(img22), getImagePath(img23)
+  ]
+  
   // Handle scroll events to update active section with throttling for performance
   useEffect(() => {
     // Throttle function to limit how often the scroll handler fires

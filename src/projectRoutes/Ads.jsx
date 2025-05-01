@@ -11,6 +11,7 @@ import tataTrust from '../images/tataTrust.jpg'
 import accCEm from '../images/accCEm.jpg'
 import Header from '../components/Header'
 import LazyImage from '../components/LazyImage'
+import { getImagePath } from '../utils/imageUtils'
 
 const Ads = () => {
     const ads = [
@@ -19,7 +20,7 @@ const Ads = () => {
             title: "Hero Xoom Advertisement",
             description: "Hero Xoom Advertisement is a 2024 Indian Hindi-language advertisement for Hero Xoom, a brand of Hero. Starring Ranbir Kapoor ,the advertisement is part of successful campaign of Hero Xoom.",
             location: "Shot in the terrain of THANO FOREST near Dehradun Airport Road. Also this ad was shot at famous NEEM BEACH in Rishikesh.",
-            image: heroxoom,
+            image: getImagePath(heroxoom),
             link: "https://youtu.be/L8WBysfLU-g?si=YCvU9AsqSUqUx22D",
         },
         {
@@ -27,7 +28,7 @@ const Ads = () => {
             title: "Advanced Mg Gloster Advertisement",
             description: "Advanced Mg Gloster is a 2024 Indian Hindi-language advertisement for  Mg Gloster, a brand of Morris Garages India. with the tagline    #DriveUnstoppable ,the advertisement is part of successful campaign of Advanced Mg Gloster Black Storm.",
             location: "Shot in the visually stunning location of Vindhyavasini Temple situated between Haridwar and Rishikesh.",
-            image: mggloster,
+            image: getImagePath(mggloster),
             link: "https://youtu.be/fSyilrGqreE?si=HZPrFApxEj4nu6QB",
         },
         {
@@ -35,7 +36,7 @@ const Ads = () => {
             title: "Sleepwell Matress AD",
             description: "Sleepwell is a 2024 Indian Hindi-language advertisement for Sleepwell Matresses,for brand  Sleepwell.The advertisement is clear depiction of brands' quality and part of successful campaign of Sleepwell.",
             location: "Shot in the visually stunning location of Vindhyavasini Temple situated between Haridwar and Rishikesh.",
-            image: sleepwell,
+            image: getImagePath(sleepwell),
             link: "https://youtu.be/rv67HG__45o?si=U1j_hNJKvu7tnF-l",
         },
         {
@@ -43,7 +44,7 @@ const Ads = () => {
            title: "Tata Namak(ad-1)",
            description: "Tata Namak is a 2023 Indian Hindi-language advertisement for Tata Namak, a brand of Tata.The advertisement is part of successful campaign of Tata Namak.",
            location: "Shot in the visually stunning location of The Mall in Haridwar.",
-           image: tatanamak,
+           image: getImagePath(tatanamak),
            link: "https://youtu.be/rv67HG__45o?si=U1j_hNJKvu7tnF-l",
         },
         {
@@ -51,7 +52,7 @@ const Ads = () => {
             title: "Tata Namak(ad-2)",
             description: "Tata Namak(ad-2) is a 2023 Indian Hindi-language advertisement for Tata Namak, a brand of Tata.The advertisement is part of multiple promotional advertisements for Tata Namak.",
             location: "Shot in the visually stunning location of The Mall in Haridwar.",
-            image: tataparrot,
+            image: getImagePath(tataparrot),
             link: "https://youtu.be/JXLOPc2KCYE?si=I6eTIdE1c8XJvIpC",
         },
         {
@@ -59,7 +60,7 @@ const Ads = () => {
             title: "MN NƯỚC TĂNG LỰC VỊ CÀ PHÊ WAKE-UP 247 MỚI AD",
             description: "MN NƯỚC TĂNG LỰC VỊ CÀ PHÊ WAKE-UP 247 MỚI is a 2024 Indian Hindi-language advertisement for MN NƯỚC TĂNG LỰC VỊ CÀ PHÊ WAKE-UP 247 MỚI, a caffeine rich energy drink .The advertisement is part of successful campaign of MN NƯỚC TĂNG LỰC VỊ CÀ PHÊ WAKE-UP 247 MỚI in the Indian Subcontinent",
             location: "Shot in the visually stunning location of The Mall in Haridwar.",
-            image: drinkad,
+            image: getImagePath(drinkad),
             link: "https://youtu.be/NsE03AHdPhs?si=A-7i2R-6UjIci0Y6",
         },
         {
@@ -67,7 +68,7 @@ const Ads = () => {
             title: "Realme Phone AD",
             description: "realme is a 2024 Indian Hindi-language advertisement for  mobile phones , for brand  realme.The advertisement is part of successful campaign of realme especially targetting Diwali season market",
             location: "Shot in the visually stunning location of The Mall in Haridwar.",
-            image: realme,
+            image: getImagePath(realme),
             link: "https://youtu.be/oluZLs6Ky3U?si=AA5J3ZklXpTDtvqz",
         },
         {
@@ -75,7 +76,7 @@ const Ads = () => {
             title: "P&G Shiksha AD",
             description: "P&G Shiksha Advertisement is a 2022 Indian Hindi-language advertisement for P&G Shiksha, a brand of P&G. The advertisement is a part of the brand's campaign to promote education and the importance of education in one's life.",
             location: "Shot in the visually stunning location of The Mall in Haridwar.",
-            image: pgmunni,
+            image: getImagePath(pgmunni),
             link: "https://youtu.be/bErKJIWV_sU?si=Vtv_uRxMyua8riOs",
         },
         {
@@ -83,7 +84,7 @@ const Ads = () => {
             title: "Tata Trusts Ad",
             description: "Tata Trusts Ad is a 2023 Indian Hindi-language advertisement for Tata Trusts, a brand of Tata, to promote their initiative of providing water  to the underprivileged people of Tehri in India.The advertisement is part of multiple promotional advertisements for Tata Trusts initiative.",
             location:"Shot at Kanatal Range of Tehri Garhwal, Uttarakhand.",
-            image: tataTrust,
+            image: getImagePath(tataTrust),
             link: "https://youtu.be/JXLOPc2KCYE?si=I6eTIdE1c8XJvIpC",
         },
         {
@@ -91,7 +92,7 @@ const Ads = () => {
             title: "ACC Cement Ad",
             description: "ACC Cement Ad is a 2023 Indian Hindi-language advertisement for ACC Cement, a brand of ACC.The advertisement is part of multiple promotional advertisements for ACC Cement.",
            location:"Shot at Shrinagar;s scenic beauty ,also covering Tehri Garhwal for additional shots.",
-            image: accCEm,
+            image: getImagePath(accCEm),
             link: "https://youtu.be/JXLOPc2KCYE?si=I6eTIdE1c8XJvIpC",
         },
     ]
