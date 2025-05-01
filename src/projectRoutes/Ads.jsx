@@ -10,6 +10,7 @@ import pgmunni from '../images/pgmunni.jpg'
 import tataTrust from '../images/tataTrust.jpg'
 import accCEm from '../images/accCEm.jpg'
 import Header from '../components/Header'
+import LazyImage from '../components/LazyImage'
 
 const Ads = () => {
     const ads = [
@@ -104,7 +105,12 @@ const Ads = () => {
             <div key={ad.id} className="bg-white rounded-xl shadow-2xl overflow-hidden hover:shadow-3xl transition-shadow duration-300">
               <div className="flex flex-col md:flex-row">
                 <div className="md:w-1/3">
-                  <img src={ad.image} alt={ad.title} className="w-full h-full object-cover" />
+                  <LazyImage 
+                    src={ad.image} 
+                    alt={ad.title} 
+                    className="w-full h-full object-cover" 
+                    placeholderClassName="bg-gray-200 animate-pulse-slow w-full h-full"
+                  />
                 </div>
                 <div className="md:w-2/3 p-8">
                   <h2 className="text-3xl font-semibold text-gray-800 mb-4">{ad.title}</h2>

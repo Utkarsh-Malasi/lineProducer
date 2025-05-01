@@ -1,11 +1,42 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-body{
-    color: white;
-    background-image: url('./images/bg3.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+
+body {
+    color: #333;
+    background-color: #f8f9fa;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Animation for diagonal gallery */
+@keyframes scrollLeft {
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-50%, 0, 0); }
+}
+
+@keyframes scrollRight {
+    0% { transform: translate3d(-50%, 0, 0); }
+    100% { transform: translate3d(0, 0, 0); }
+}
+
+.animate-scroll-left {
+    animation: scrollLeft 30s linear infinite;
+    will-change: transform;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+}
+
+.animate-scroll-right {
+    animation: scrollRight 30s linear infinite;
+    will-change: transform;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+}
+
+/* Line clamp utility */
+.line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
 }
