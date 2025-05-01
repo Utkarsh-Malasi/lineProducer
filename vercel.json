@@ -3,7 +3,7 @@
     "framework": "vite",
     "routes": [
       { "handle": "filesystem" },
-      { "src": "/dist/dist/assets/(.*)", "dest": "/dist/dist/assets/$1" },
+      { "src": "/dist/assets/(.*)", "dest": "/dist/assets/$1" },
       { "src": "/(.*)", "dest": "/index.html" }
     ]
   }
